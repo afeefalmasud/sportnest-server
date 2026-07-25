@@ -42,7 +42,7 @@ async function run() {
 
     app.get('/facility/:id', async(req,res)=>{
       const {id} = req.params;
-      const resu = await facilityCollection.findOne({_id: new ObjectId(id)})
+      const result = await facilityCollection.findOne({_id: new ObjectId(id)})
       res.json(result);
     })
 
